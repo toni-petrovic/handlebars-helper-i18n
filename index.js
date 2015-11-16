@@ -39,7 +39,8 @@ exports.i18n = function (key, options) {
   }
 
   if (typeof this[language][key] === "undefined") {
-    throw "{{i18n}} helper: property '" + key + "' is not defined for language '" + language + "'.";
+    // throw "{{i18n}} helper: property '" + key + "' is not defined for language '" + language + "'.";
+    this[language][key] = key;
   }
 
   return this[language][key];
